@@ -15,19 +15,19 @@ const isValidNumber = (input) => {
 };
 
 rl.question("Enter product name: ", (name) => {
-  if (!isValidString(name)) {
+  if (!isValidString(name) && name.trim() === "") {
     console.log("Invalid name. Please enter a valid string.");
     rl.close();
     return;
   }
   rl.question("Enter product price: ", (price) => {
-    if (!isValidNumber(price)) {
+    if (price.trim() === "" || !isValidNumber(price)) {
       console.log("Invalid price. Please enter a valid number.");
       rl.close();
       return;
     }
     rl.question("Enter product id: ", async (id) => {
-      if (!isValidNumber(id)) {
+      if (id.trim() === "" || !isValidNumber(id)) {
         console.log("Invalid ID. Please enter a valid number.");
         rl.close();
         return;
