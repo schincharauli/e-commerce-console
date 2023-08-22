@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "product:save": "node ./src/scripts/saveProduct.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -12,7 +13,7 @@
   "dependencies": {
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "pgk": "^0.0.1-security",
+    "pg": "^8.11.3",
     "pool": "^0.4.1"
   }
 }
