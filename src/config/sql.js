@@ -11,5 +11,14 @@ const pool = new Pool({
   });
 
 
-  
+  export const createProductTable = async () => {
+    return await pool.query(`
+    CREATE TABLE IF NOT EXISTS product(
+      id SERIAL PRIMARY KEY, 
+      name TEXT, 
+      price INT, 
+      id INT
+  )`);
+  };
+
   export default pool;
